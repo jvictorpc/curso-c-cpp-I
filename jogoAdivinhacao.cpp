@@ -7,10 +7,11 @@ int main (){
     printf("****************************************************************\n\n");
 
     //declaração de variaveis
-    int chute, numeroSecreto, maior, acertou, cont;
+    int chute, numeroSecreto, maior, acertou, cont, pontos;
 
     numeroSecreto = 42;
     cont = 1;
+    pontos = 1000;
 
     while(1){
 
@@ -36,8 +37,12 @@ int main (){
         }else{
             printf("O numero secreto eh maior!!\n\n");
         }
+
+        int pontos_perdidos = (chute - numeroSecreto)/2;
+        pontos = pontos - pontos_perdidos;
         cont++;
     }
+    
     printf("FIM DE JOGO\n");
     printf("Voce demorou %d tentativas pra acertar o numero.", cont);
         
