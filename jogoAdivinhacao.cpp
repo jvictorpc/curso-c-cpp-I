@@ -38,6 +38,10 @@ int main (){
 
         if(acertou){
             printf("vc acertou!!!\n\n");
+            printf("===================================================\n");
+            printf("FIM DE JOGO\n");
+            printf("Voce demorou %d tentativas pra acertar o numero.\n", cont);
+            printf("Voce fez %.2f pontos.\n", pontos);
             break;
         }else if (maior){
             printf("O numero secreto eh menor!!\n\n");
@@ -49,10 +53,7 @@ int main (){
         pontos = pontos - pontos_perdidos;
         cont++;
     }
-    printf("===================================================\n");
-    printf("FIM DE JOGO\n");
-    printf("Voce demorou %d tentativas pra acertar o numero.\n", cont);
-    printf("Voce fez %.2f pontos", pontos);
+    
 
     system("pause");
     system("cls");    
