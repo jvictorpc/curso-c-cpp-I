@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main (){
 
     printf("****************************************************************\n");
-    printf("*           Bem vindo ao jogo da adivinhacao                 *\n");
+    printf("*               jogo da adivinhacao                            *\n");
     printf("****************************************************************\n\n");
 
     //declaração de variaveis
     int chute, numeroSecreto, maior, acertou, cont;
     double pontos;
-
-    numeroSecreto = 42;
+   
+    int segundos = time(0);
+    srand(segundos);
+    int num_grande = rand();
+    numeroSecreto = num_grande % 100;
+    
     cont = 1;
     pontos = 1000;
 
@@ -48,6 +53,8 @@ int main (){
     printf("FIM DE JOGO\n");
     printf("Voce demorou %d tentativas pra acertar o numero.\n", cont);
     printf("Voce fez %.2f pontos", pontos);
-        
+
+    system("pause");
+    system("cls");    
     return 0;
 }
