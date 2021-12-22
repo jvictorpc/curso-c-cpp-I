@@ -2,14 +2,29 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main (){
 
-    printf("****************************************************************\n");
-    printf("*               jogo da adivinhacao                            *\n");
-    printf("****************************************************************\n\n");
+
+int main (){
+    
+printf("\n\n");  
+printf("               ______________________                          \n");
+printf("              |                      |_____    __                    \n");
+printf("              |  JOGO DA ADIVINHACAO |     |__|  |____          \n");
+printf("              |______________________|     |::|  |    /          \n");
+printf(" /\\**/\\       |                \\.____|::|__|      <         \n");
+printf("( o_o  )_     |                      \\::/  \\._______\\       \n");
+printf(" (u--u   \\_)  |                                               \n");
+printf("  (||___   )==\\                                               \n");
+printf(",dP\"/b/=( /P\\\"/b\\                                          \n");
+printf("|8 || 8\\=== || 8                                              \n");
+printf("`b,  ,P  `b,  ,P                                               \n");
+printf("  \"\"\"`     \"\"\"`                                          \n");
+
+
+
 
     //declaração de variaveis
-    int chute, numeroSecreto, maior, acertou, cont;
+    int chute, numeroSecreto, maior, acertou=0, cont;
     double pontos;
    
     int segundos = time(0);
@@ -71,13 +86,36 @@ int main (){
     }
 
     if(acertou){
-        printf("vc acertou!!!\n\n");
+        printf("               _____                                       \n");
+        printf("              /     \\           PARABENS!!!               \n");
+        printf("              vvvvvvv  /|__/|   VOCE VENCEU!!!             \n");
+        printf("                 I   /O,O   |                              \n");
+        printf("                 I /_____   |      /|/|                    \n");
+        printf("                J|/^ ^ ^ \\  |    /00  |    _//|           \n");
+        printf("                 |^ ^ ^ ^ |W|   |/^^\\ |   /oo |           \n");
+        printf("                  \\m___m__|_|    \\m_m_|   \\mm_|         \n");
+
         printf("===================================================\n");
         printf("FIM DE JOGO\n");
         printf("Voce demorou %d tentativas pra acertar o numero.\n", cont);
         printf("Voce fez %.2f pontos.\n", pontos);
     }else{
-        printf("you lose playboy!!! tente denovo.");
+
+        printf("       _..._                     \n");
+        printf("     .'     '.                      \n");
+        printf("    /`\\     /`\\    |\\               \n");
+        printf("   (__|     |__)    \\\\              \n");
+        printf("   (     \"     )    ||              \n");
+        printf("    \\         /    _||_            \n");
+        printf("     \\ \\__/  /  |\\|`  /             \n");
+        printf("      '.___.'   \\____/              \n");
+        printf("       (___)    (___)               \n");
+        printf("     /`     `\\  / /                 \n");
+        printf("    |         \\/ /                  \n");
+        printf("    | |  VC  |\\  /                   \n");
+        printf("    | |PERDEU| \"`                    \n");
+        printf("    | |OTARIO|                       \n");
+        printf("    | | !!!  |                       \n");
     }
 
    
