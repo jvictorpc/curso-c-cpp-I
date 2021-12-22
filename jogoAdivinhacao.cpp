@@ -40,7 +40,7 @@ int main (){
             printf("O numero secreto eh maior!!\n\n");
         }
 
-        double pontos_perdidos = abs((double)(chute - numeroSecreto))/2;
+        double pontos_perdidos =(double) abs((chute - numeroSecreto))/2;
         pontos = pontos - pontos_perdidos;
         cont++;
     }
