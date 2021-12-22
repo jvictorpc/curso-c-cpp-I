@@ -8,7 +8,8 @@ int main (){
     printf("****************************************************************\n\n");
 
     //declaração de variaveis
-    int chute, numeroSecreto, maior, acertou, cont, pontos;
+    int chute, numeroSecreto, maior, acertou, cont;
+    double pontos;
 
     numeroSecreto = 42;
     cont = 1;
@@ -39,13 +40,14 @@ int main (){
             printf("O numero secreto eh maior!!\n\n");
         }
 
-        int pontos_perdidos = (chute - numeroSecreto)/2;
+        double pontos_perdidos = abs((double)(chute - numeroSecreto))/2;
         pontos = pontos - pontos_perdidos;
         cont++;
     }
-    
+    printf("===================================================\n");
     printf("FIM DE JOGO\n");
-    printf("Voce demorou %d tentativas pra acertar o numero.", cont);
+    printf("Voce demorou %d tentativas pra acertar o numero.\n", cont);
+    printf("Voce fez %.2f pontos", pontos);
         
     return 0;
 }
