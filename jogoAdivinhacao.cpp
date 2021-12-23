@@ -6,53 +6,68 @@
 
 int main (){
     
-printf("\n\n");  
-printf("               ______________________                          \n");
-printf("              |                      |_____    __                    \n");
-printf("              |  JOGO DA ADIVINHACAO |     |__|  |____          \n");
-printf("              |______________________|     |::|  |    /          \n");
-printf(" /\\**/\\       |                \\.____|::|__|      <         \n");
-printf("( o_o  )_     |                      \\::/  \\._______\\       \n");
-printf(" (u--u   \\_)  |                                               \n");
-printf("  (||___   )==\\                                               \n");
-printf(",dP\"/b/=( /P\\\"/b\\                                          \n");
-printf("|8 || 8\\=== || 8                                              \n");
-printf("`b,  ,P  `b,  ,P                                               \n");
-printf("  \"\"\"`     \"\"\"`                                          \n");
-
-
-
-
     //declaração de variaveis
     int chute, numeroSecreto, maior, acertou=0, cont;
     double pontos;
    
+   //gerando numeros aleatórios usando o tempo 
     int segundos = time(0);
     srand(segundos);
     int num_grande = rand();
     numeroSecreto = num_grande % 100;
     int dificuldade = 0;
+    int ehvalido = 0;
     int num_tentativas = 0;
 
-    printf("Informe o nivel de dificuldade:\n");
-    printf("(1) Facil (2) Medio (3) Dificil\n");
-    scanf("%d", &dificuldade);
+    //só sai do loop se o valor digitado for válido
+    while (ehvalido == 0){  
+        printf("\n\n");  
+        printf("               ______________________                          \n");
+        printf("              |                      |_____    __                    \n");
+        printf("              |  JOGO DA ADIVINHACAO |     |__|  |____          \n");
+        printf("              |______________________|     |::|  |    /          \n");
+        printf(" /\\**/\\       |                \\.____|::|__|      <         \n");
+        printf("( o_o  )_     |                      \\::/  \\._______\\       \n");
+        printf(" (u--u   \\_)  |                                               \n");
+        printf("  (||___   )==\\                                               \n");
+        printf(",dP\"/b/=( /P\\\"/b\\                                          \n");
+        printf("|8 || 8\\=== || 8                                              \n");
+        printf("`b,  ,P  `b,  ,P                                               \n");
+        printf("  \"\"\"`     \"\"\"`                                          \n");
+        printf("================================================================\n");
 
-    switch(dificuldade){
-        case 1:
-            num_tentativas = 20;
-            break;
-        case 2:
-            num_tentativas = 15;
-            break;
-        case 3:
-            num_tentativas = 6;
-            break;
-        default:
-            printf("Nao eh uma diculdade valida!!!\n\n");
-            break;
-    }
+        printf("Informe o nivel de dificuldade:\n");
+        printf("(1) Facil (2) Medio (3) Dificil (4) Sair\n");
+        scanf("%d", &dificuldade);
+
     
+        switch(dificuldade){
+            case 1:
+                num_tentativas = 20;
+                ehvalido = 1;
+                break;
+            case 2:
+                num_tentativas = 15;
+                ehvalido = 1;
+                break;
+            case 3:
+                num_tentativas = 6;
+                ehvalido = 1;
+                break;
+            case 4:
+                ehvalido = 1;
+                system("cls");
+                return 0; 
+                break;
+            default:
+                printf("Nao eh uma diculdade valida!!!\n\n");
+                system("pause");
+                system("cls");
+                break;
+        }
+
+    }
+   
     cont = 1;
     pontos = 1000;
 
